@@ -1,0 +1,29 @@
+﻿  pch.cpp
+  Events.cpp
+C:\Users\iolds\source\repos\BPR-AP-Client2\BPR-AP-Client\Events.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file '/BPR-AP-Client2/BPR-AP-Client/Events.cpp')
+  
+  Hooks.cpp
+C:\Users\iolds\source\repos\BPR-AP-Client2\BPR-AP-Client\Hooks.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file '/BPR-AP-Client2/BPR-AP-Client/Hooks.cpp')
+  
+C:\Users\iolds\source\repos\BPR-AP-Client2\BPR-AP-Client\Hooks.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file '/BPR-AP-Client2/BPR-AP-Client/Hooks.cpp')
+  
+C:\Users\iolds\source\repos\BPR-AP-Client2\BPR-AP-Client\Events.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file '/BPR-AP-Client2/BPR-AP-Client/Hooks.cpp')
+  
+  dllmain.cpp
+C:\Users\iolds\source\repos\BPR-AP-Client2\BPR-AP-Client\dllmain.cpp(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file '/BPR-AP-Client2/BPR-AP-Client/dllmain.cpp')
+  
+C:\Users\iolds\source\repos\BPR-AP-Client2\BPR-AP-Client\Hooks.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file '/BPR-AP-Client2/BPR-AP-Client/dllmain.cpp')
+  
+C:\Users\iolds\source\repos\BPR-AP-Client2\BPR-AP-Client\Events.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file '/BPR-AP-Client2/BPR-AP-Client/dllmain.cpp')
+  
+  Generating Code...
+  BPR-AP-Client.vcxproj -> C:\Users\iolds\source\repos\BPR-AP-Client\Debug\BPR-AP-Client.dll
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
