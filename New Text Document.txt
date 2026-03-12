@@ -1,0 +1,67 @@
+BurnoutPR.exe+7E375E 
+Increments total smash counter
+
+BurnoutPR.exe+7E37C5 
+Increments Total BillBoard counter
+
+BurnoutPR.exe+637A93 
+Writes current save stuff out
+
+BurnoutPR.exe+7E8C5E0
+Save Data
+
+BurnoutPR.exe+7EB2688
+Base save data??
+
+BurnoutPR.exe + 5d86e7a
+Starts a save?
+
+BurnoutPR.exe+636E06 
+Updates a Smash Counter
+
+BurnoutPR.exe+6C139F3 
+Funtion that updates world state.
+this line goes to menu state I think
+
+BurnoutPR.exe+679940
+runs when touching an intersection trigger
+
+BurnoutPR.exe+621CE0 
+Runs to find the nearest intersection and set it to unlocked
+0xA21E2A - specifically updates that intersection to be found in save data
+
+06E7782E - Updates Intersection when race finished
+06E77A2B - Updates Intersection when race finished
+
+BurnoutPR.exe+6A77AC3
+increments race win counter on win
+
+BurnoutPR.exe+6A76B60
+Give rewards on race win
+
+
+BurnoutPR.exe + 0x610717
+UPGRADE LICENSE
+
+5B F3 04 00
+D8 56 07 00
+
+event data
+
+131,135, runall ways
+
+138 (backwards?)
+
+82, oncoming
+83 finish oncoming
+
+75 drifting
+76 spinning
+77 in air
+72 near miss
+
+
+129:
+
+2B 61 30 45 36 8E 46 41 9B 1E 04 C4 00 00 80 3F 02 00 00 00 27 F8 06 00 8F 00 C8 00 00
+________________________________________________Type--------ObjectId----PramA-------ParamB

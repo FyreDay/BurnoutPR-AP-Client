@@ -35,7 +35,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
         try {
             CreateConsole();
             Logger::Get().Start();
-            Logger::Get().Log("First");
+
             MH_Uninitialize();
             MH_Initialize();
             Hooks::SetupHooks();

@@ -68,16 +68,44 @@ __declspec(naked) void __stdcall Hooks::IslandBreakhook()
         jmp IslandBreakHookOriginReturnAddr
     }
 }
+FunctionType ShowEventHookOrigin = nullptr;
+uintptr_t ShowEventHookOriginReturnAddr;
+uintptr_t ShowEventHookOriginEndAddr;
+uintptr_t ShowEventJumpAddr;
+
+__declspec(naked) void __stdcall  Hooks::ShowEventHook()
+{
+    __asm
+    {
+        pushfd
+        pushad
+        push eax
+        call ItemHandler::HasEvent
+        add esp, 0x4
+        test al, al
+        je target
+        popad
+        popfd
+        jne cont
+        or ecx, 1
+        jmp ShowEventHookOriginReturnAddr
+    target:
+        popad
+        popfd
+        jmp ShowEventHookOriginEndAddr
+    cont:
+        jmp ShowEventJumpAddr
+    }
+}
 
 
 void Hooks::SetupHooks()
 {
-    Logger::Get().Log(std::to_string(Core::moduleBase));
     char* addr;
     
-    hookOriginReturnAddr = 0x00A254DD + 7;
-    addr = (char*)(0x00A254DD);
-    MH_CreateHook((LPVOID)addr, &EventHook, reinterpret_cast<LPVOID*>(&hookOrigin));
+    //hookOriginReturnAddr = 0x00A254DD + 7;
+    //addr = (char*)(0x00A254DD);
+    //MH_CreateHook((LPVOID)addr, &EventHook, reinterpret_cast<LPVOID*>(&hookOrigin));
 
     BreakHookOriginReturnAddr = Core::moduleBase + 0x2DDB735 + 5;
     addr = (char*)(Core::moduleBase + 0x2DDB735);
@@ -86,4 +114,10 @@ void Hooks::SetupHooks()
     IslandBreakHookOriginReturnAddr = Core::moduleBase + 0x2E1079A + 7;
     addr = (char*)(Core::moduleBase + 0x2E1079A);
     MH_CreateHook((LPVOID)addr, &IslandBreakhook, reinterpret_cast<LPVOID*>(&IslandBreakHookOrigin));
+
+    ShowEventHookOriginReturnAddr = Core::moduleBase + 0x621E25 + 5;
+    ShowEventHookOriginEndAddr = Core::moduleBase + 0x622342;
+    ShowEventJumpAddr = Core::moduleBase + 0x621E88;
+    addr = (char*)(Core::moduleBase + 0x621E25);
+    MH_CreateHook((LPVOID)addr, &ShowEventHook, reinterpret_cast<LPVOID*>(&ShowEventHookOrigin));
 }
