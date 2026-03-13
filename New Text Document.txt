@@ -39,9 +39,11 @@ increments race win counter on win
 BurnoutPR.exe+6A76B60
 Give rewards on race win
 
-
 BurnoutPR.exe + 0x610717
 UPGRADE LICENSE
+
+BurnoutPR.exe+0x6CB0470
+Switch Game State (3 is main menu, 4 prep game? 5 load save???)
 
 5B F3 04 00
 D8 56 07 00
